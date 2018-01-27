@@ -30,3 +30,11 @@ hafa erft ótengda eiginleika frá Object.prototype og String.prototype,
   var turnMeIntoAString = ["U", "d", "a", "c", "i", "t", "y"];
   svar join()
 4
+test.forEach(function addsHundred(value, index) {
+    if (value % 3) {
+    	value += 100;
+    	test.splice(index, 1, value);
+    }
+});
+console.log(test);
+5
