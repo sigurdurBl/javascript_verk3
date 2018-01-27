@@ -38,3 +38,58 @@ test.forEach(function addsHundred(value, index) {
 });
 console.log(test);
 5
+var totals= bills.map(function(number,index,array) {
+                number+= number*0.15;
+               return Number((number.toFixed(2)));
+            });
+
+console.log(totals);
+6
+for(var r=0;r < numbers.length; r ++){
+    for (var c=0; c< numbers[r].length;c++){
+        if (numbers[r][c] % 2 === 0) {
+            numbers[r][c]="even";
+            console.log(numbers[r][c]);
+        }
+        else {
+            numbers[r][c]="odd";
+            console.log(numbers[r][c]);
+        }
+        }
+    }
+console.log(numbers);
+7
+breakfast = {
+    name:"The Lumberjack",
+    price:9.95,
+    ingredients: ["eggs", "sausage", "toast", "hashbrowns", "pancakes"]
+};
+console.log(breakfast.name, breakfast.price)
+
+console.log(breakfast.ingredients)
+8
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+    deposit: function addMoney(amount) {
+        if (amount > 0) {
+            savingsAccount.balance += amount;
+        }
+    },
+    withdraw: function removeMoney(amount) {
+        var verifyBalance = savingsAccount.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            savingsAccount.balance -= amount;
+        }
+    },
+    printAccountSummary: function() {
+        var message = "Welcome!\nYour balance is currently $"+savingsAccount.balance+" and your interest rate is "+savingsAccount.interestRatePercent+"%.";
+        return message;
+    }
+};
+
+console.log(savingsAccount.printAccountSummary());
+9
+donuts.forEach(function(donut) {
+  console.log(donut.type + " donuts cost $" + donut.cost + " each"); 
+  
